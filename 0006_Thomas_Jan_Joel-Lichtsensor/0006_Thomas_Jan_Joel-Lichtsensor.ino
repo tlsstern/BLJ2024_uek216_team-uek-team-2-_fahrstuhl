@@ -5,7 +5,7 @@
 const char* device_id = "Jan/Thomas-Light-Sensor-right";
 const char* ssid = "GuestWLANPortal";
 const char* mqtt_server = "10.10.2.127";
-const char* topic3 = "zuerich/fahrstuhl/LightLeft/in";
+const char* topic3 = "zuerich/fahrstuhl/right/Light/in";
  
 WiFiClient espClient;
 PubSubClient client(espClient);
