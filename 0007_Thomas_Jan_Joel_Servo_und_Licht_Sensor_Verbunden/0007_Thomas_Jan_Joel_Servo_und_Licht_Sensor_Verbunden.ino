@@ -8,8 +8,8 @@
 const char* device_id = "Jan/Thomas-Elevator";
 const char* ssid = "GuestWLANPortal";
 const char* mqtt_server = "10.10.2.127";
-const char* topic1 = "zuerich/fahrstuhl/Light/in";
-const char* topic2 = "zuerich/fahrstuhl/Servo/out";
+const char* topic1 = "zuerich/fahrstuhl/left/Light/in";
+const char* topic2 = "zuerich/fahrstuhl/left/Servo/out";
 int click = 0;
 
 Servo sg90;
@@ -92,14 +92,13 @@ void loop() {
     delay(500);
   }
   if (click == 2) {
-    sg90.write(170);
+    sg90.write(180);
     delay(500);
     sg90.write(90);
     delay(500);
   }
   sg90.detach();
   click = 0;
-
   delay(1000);
   client.loop();
 }
